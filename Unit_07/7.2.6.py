@@ -123,16 +123,16 @@ def remove_duplicate_products(products):
 
 
 OPTIONS =\
-    {
-        1 : print_product,
-        2 : print_number_of_products,
-        3 : check_existence_of_product,
-        4 : check_amount_of_product,
-        5 : delete_product,
-        6 : add_product,
-        7 : print_ilegal_products,
-        8 : remove_duplicate_products
-    }
+{
+    1 : print_product,
+    2 : print_number_of_products,
+    3 : check_existence_of_product,
+    4 : check_amount_of_product,
+    5 : delete_product,
+    6 : add_product,
+    7 : print_ilegal_products,
+    8 : remove_duplicate_products
+}
 
 
 def main():
