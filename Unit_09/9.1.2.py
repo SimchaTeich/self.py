@@ -5,7 +5,7 @@ def sort(file_object):
     :param file_object: file object
     :type file_object: _io.TextIOWrapper (just text file)
     """
-    print(sorted(file_object.read().split()))
+    print(sorted(set(file_object.read().split())))
 
 
 def rev(file_object):
