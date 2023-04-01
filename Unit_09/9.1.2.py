@@ -43,12 +43,9 @@ def main():
     file_path = input("Enter a file path: ")
     task = input("Enter a task: ")
 
-    file_object = open(file_path, 'r')
-
-    # call the right task.
-    TASKS[task](file_object)
-    
-    file_object.close()
+    with open(file_path) as file_object:
+        # call the right task.
+        TASKS[task](file_object)
 
 
 if __name__ == '__main__':
