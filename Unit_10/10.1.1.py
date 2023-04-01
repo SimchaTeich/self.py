@@ -79,8 +79,10 @@ def show_hidden_word(secret_word, old_letters_guessed):
 
 def check_valid_input(letter_guessed, old_letters_guessed):
     letter_guessed = letter_guessed.lower()
-    return len(letter_guessed) == 1 and letter_guessed.isalpha() \
-            and letter_guessed not in old_letters_guessed
+    
+    return len(letter_guessed) == 1 and \
+            letter_guessed.isalpha() and \
+            letter_guessed not in old_letters_guessed
 
 
 def try_update_letter_guessed(letter_guessed, old_letters_guessed):
@@ -97,10 +99,7 @@ def choose_word(file_path, index):
     with open(file_path) as f:
         words = f.read().split()
     
-    index -= 1
-    index %= len(words)
-    
-    return len(set(words)), words[index]
+    return words[(index-1) % len(words)]
 
 
 def print_hangman(num_of_tries):
@@ -115,7 +114,7 @@ def get_secret_word():
     file_path = input("Enter file path: ")
     index = int(input("Enter index: "))
     
-    return choose_word(file_path, index)[1]
+    return choose_word(file_path, index)
 
 
 def main():
