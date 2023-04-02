@@ -14,20 +14,15 @@ def find_missing_from_list(numbers_list):
 
 
 def who_is_missing(file_name):
-    # open file
-    file_object = open(file_name, 'r')
-
-    # get file content and close the file.
-    list_of_numbers = [int(n) for n in file_object.read().split(',')]
-    file_object.close()
+    with open(file_name, 'r') as file_object:
+        list_of_numbers = [int(n) for n in file_object.read().split(',')]
 
     # get the missing number
     missing_num = find_missing_from_list(list_of_numbers)  
 
     # wrtie the answer to new file
-    output_file = open("found.txt", 'w')
-    output_file.write(str(missing_num))
-    output_file.close()
+    with open("found.txt", 'w') as output_file:
+        output_file.write(str(missing_num))
 
     # return the missing value
     return missing_num
