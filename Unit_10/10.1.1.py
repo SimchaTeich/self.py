@@ -162,6 +162,9 @@ def print_hangman(num_of_tries):
 
 
 def print_open_screen():
+    """
+    prints the open screen of the game
+    """
     print(HANGMAN_ASCII_ART + '\n' + str(MAX_TRIES))
 
 
