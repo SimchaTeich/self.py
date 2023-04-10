@@ -83,7 +83,20 @@ def check_win(secret_word, old_letters_guessed):
 
 
 def show_hidden_word(secret_word, old_letters_guessed):
-
+    """
+    Make string that shows just the letter was guessed
+    from the secret word.
+    For example:
+        secret_word = "helloworld"
+        old_letters_guessed = ['o', 'l', 'h']
+        so function return the string: "h _ l l o _ o _ l _"
+    :param secret_word: the secret word of the game
+    :type secret_word: str
+    :param old_letters_guessed: words user was guessed
+    :type old_letters_guessed: list of strgins
+    :return: string as exaplain abouv
+    :rtype: str
+    """
     return ' '.join(l if l in old_letters_guessed else '_' for l in secret_word)
 
 
