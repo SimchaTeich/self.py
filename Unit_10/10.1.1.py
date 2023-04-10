@@ -76,11 +76,14 @@ def check_win(secret_word, old_letters_guessed):
     :type secret_word: str
     :param old_letters_guessed: words user was guessed
     :type old_letters_guessed: list of strgins
+    :return: True if old_letters_guessed contains all secret_word letter
+    :rtype: bool
     """
     return all([l in old_letters_guessed for l in secret_word])
 
 
 def show_hidden_word(secret_word, old_letters_guessed):
+
     return ' '.join(l if l in old_letters_guessed else '_' for l in secret_word)
 
 
