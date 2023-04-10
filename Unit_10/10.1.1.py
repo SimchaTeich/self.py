@@ -169,6 +169,12 @@ def print_open_screen():
 
 
 def get_secret_word():
+    """
+    Ask user for file path with words,
+    and one index (from 1 and so on) for one of them
+    :return: word from file by index
+    :rtype: str
+    """
     file_path = input("Enter file path: ")
     index = int(input("Enter index: "))
     
