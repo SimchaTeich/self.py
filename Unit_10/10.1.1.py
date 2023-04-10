@@ -119,6 +119,15 @@ def check_valid_input(letter_guessed, old_letters_guessed):
 
 
 def try_update_letter_guessed(letter_guessed, old_letters_guessed):
+    """
+    append new letter to old_letters_guessed if can.
+    :param letter_guessed: input from user
+    :type secret_word: str
+    :param old_letters_guessed: words user was guessed
+    :type old_letters_guessed: list of strings
+    :return: True if letter_guessed was inserted to list of olds.
+    :rtype: bool
+    """
     if check_valid_input(letter_guessed, old_letters_guessed):
         old_letters_guessed.append(letter_guessed)
         return True
