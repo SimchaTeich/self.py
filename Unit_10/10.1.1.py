@@ -154,6 +154,10 @@ def choose_word(file_path, index):
 
 
 def print_hangman(num_of_tries):
+    """
+    prints the correct draw of the hangman
+    by indexing of the HANGMAN dictionary
+    """
     print(HANGMAN_PHOTOS[num_of_tries])
 
 
