@@ -75,7 +75,7 @@ def check_win(secret_word, old_letters_guessed):
     :param secret_word: the secret word of the game
     :type secret_word: str
     :param old_letters_guessed: words user was guessed
-    :type old_letters_guessed: list of strgins
+    :type old_letters_guessed: list of strings
     :return: True if old_letters_guessed contains all secret_word letter
     :rtype: bool
     """
@@ -93,7 +93,7 @@ def show_hidden_word(secret_word, old_letters_guessed):
     :param secret_word: the secret word of the game
     :type secret_word: str
     :param old_letters_guessed: words user was guessed
-    :type old_letters_guessed: list of strgins
+    :type old_letters_guessed: list of strings
     :return: string as exaplain abouv
     :rtype: str
     """
@@ -101,6 +101,16 @@ def show_hidden_word(secret_word, old_letters_guessed):
 
 
 def check_valid_input(letter_guessed, old_letters_guessed):
+    """
+    checks if letter from user is valid guess.
+    :param letter_guessed: input from user
+    :type secret_word: str
+    :param old_letters_guessed: words user was guessed
+    :type old_letters_guessed: list of strings
+    :return: True if letter_guessed is letter
+             that was not guessed before.
+    :rtype: bool
+    """
     letter_guessed = letter_guessed.lower()
     
     return len(letter_guessed) == 1 and \
