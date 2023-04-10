@@ -70,6 +70,13 @@ HANGMAN_PHOTOS =\
 
 
 def check_win(secret_word, old_letters_guessed):
+    """
+    check if all secret letters was guessed
+    :param secret_word: the secret word of the game
+    :type secret_word: str
+    :param old_letters_guessed: words user was guessed
+    :type old_letters_guessed: list of strgins
+    """
     return all([l in old_letters_guessed for l in secret_word])
 
 
