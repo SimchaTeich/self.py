@@ -138,6 +138,15 @@ def try_update_letter_guessed(letter_guessed, old_letters_guessed):
 
 
 def choose_word(file_path, index):
+    """
+    take one word from file of words
+    :param file_path: path to file woth words.
+    :type file_path: str
+    :param index: index stars from 1 and can be modulu
+    :type index: int
+    :return: choosen word from the file
+    :rtype: str
+    """
     with open(file_path) as f:
         words = f.read().split()
     
